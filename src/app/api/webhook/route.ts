@@ -29,19 +29,14 @@ export async function POST(req: Request, res: Response) {
     case checkout_session_completed:
       const session = event.data.object;
 console.log("SESSION=>",session);
-
+// @ts-ignore
+// console.log(5 * "aaa");
       const {
-        // @ts-ignore
-        metadata: {
-          adults,
-          checkinDate,
-          checkoutDate,
-          children,
-          hotelRoom,
-          numberOfDays,
-          user,
-          discount,
-          totalPrice,
+        // @ts-ignore 
+        metadata: 
+        {
+        // @ts-ignore 
+          adults, checkinDate, checkoutDate, children, hotelRoom, numberOfDays,user,      discount, totalPrice,
         },
       } = session;
 
